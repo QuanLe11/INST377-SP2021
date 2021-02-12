@@ -1,6 +1,3 @@
-/* Put your javascript in here */
-/* label the images, just for convenience, to visually track them */
-/* configuration */
 let width = 130;
 let count = 3;
 
@@ -24,3 +21,15 @@ carousel.querySelector('.next').onclick = function() {
   position = Math.max(position, -width * (listElems.length - count));
   list.style.marginLeft = position + 'px';
 };
+
+function arraysushi() {
+  const iarray = []; 
+  const images = [document.querySelector('.image')];
+  images.forEach((element) => {
+    const image = element.querySelector('li');
+    console.log(element);
+    iarray.append(image);
+  })
+  console.log(iarray);
+}
+arraysushi()
