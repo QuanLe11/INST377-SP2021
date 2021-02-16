@@ -90,5 +90,5 @@ body {
   .header {
     display: flex;
     justify-content: center;
-    color: black;
+    color: rgb(119, 49, 49);
   }
