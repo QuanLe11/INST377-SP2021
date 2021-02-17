@@ -87,7 +87,7 @@ body {
     width: 100px;
   }
 
-  .header {
+  h1 {
     display: flex;
     justify-content: center;
     color: rgb(119, 49, 49);
