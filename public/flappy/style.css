@@ -75,7 +75,7 @@ body {
     position: absolute;
 }
 
-/* @keyframes slideright {
+@keyframes slideright {
     from {
         background-position: 10000%;
     }
@@ -91,7 +91,7 @@ body {
     to {
         background-position: 0%;
     }
-  } */
+  }
 
 .ground-container {
     height: 150px;
@@ -100,7 +100,7 @@ body {
     position:  absolute;
 }
 
-/* .ground-moving {
+.ground-moving {
     position: absolute;
     top: 580px;
     height: 150px;
@@ -110,4 +110,4 @@ body {
     -webkit-animation: slideright 100s infinite linear;
     width: 100%;
     z-index: +1;
-  } */
+  }
