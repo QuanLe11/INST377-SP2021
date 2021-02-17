@@ -89,6 +89,6 @@ body {
 
   h1 {
     display: flex;
-    justify-content: center;
+    text-align: center;
     color: rgb(119, 49, 49);
   }
