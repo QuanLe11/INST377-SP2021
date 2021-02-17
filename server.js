@@ -46,6 +46,7 @@ app.route('/api')
     console.log('Now send something back to your client');
     res.json({message: 'Hello World'});
     res.status(200).send('Hello World');
+    // res.send('Hello World');
     console.log('hello123');
   });
 
