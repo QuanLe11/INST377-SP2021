@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    color: black;
+    color: rgb(36, 75, 121);
   }
   
   .flex-inner {
@@ -90,5 +90,5 @@ body {
   h1 {
     display: flex;
     justify-content: center;
-    color: rgb(119, 49, 49);
+    color: rgb(36, 75, 121);
   }
