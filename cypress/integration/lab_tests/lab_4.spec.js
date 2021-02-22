@@ -195,6 +195,7 @@ describe('Lab 4', () => {
     });
   });
 
+  // Promisified submit checker should help with race conditions
   it('Should use the submit button to POST material to the /api endpoint and receive hello world back', () => {
     cy.get('form').should('have.attr', 'method', 'post');
     cy.get('form').should('have.attr', 'action', '/api');
