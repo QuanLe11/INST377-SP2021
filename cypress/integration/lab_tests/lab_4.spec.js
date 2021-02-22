@@ -5,6 +5,7 @@ describe('Lab 4', () => {
       cy.visit('https://secret-forest-92192.herokuapp.com/labs/lab_4/'); // change URL to match your dev URL
       cy.htmlvalidate();
     });
+  });
   it("All your HTML is valid to W3C standards: check error for details of what's wrong", () => {
     const labUrl = 'labs/lab_4/';
     cy.visit(labUrl); // change URL to match your dev URL
@@ -142,6 +143,7 @@ describe('Lab 4', () => {
       cy.get('button[type=submit]')
         .click();
       cy.contains('hello world', { matchCase: false });
+  });
   it('Your .flex-outer element should have a constrained width and reset padding to fit nicely on a screen', () => {
     cy.get('.flex-outer').should(($ul) => {
       const style = window.getComputedStyle($ul[0]);
