@@ -2,7 +2,7 @@ describe('Lab 2', () => {
   it('Successfully loads with valid HTML', () => {
     cy.fixture('test_values').then((json) => {
       const labUrl = `${json.test_context || ''}labs/lab_2/`;
-      cy.visit(labUrl); // change URL to match your dev URL
+      cy.visit('https://secret-forest-92192.herokuapp.com/labs/lab_2/'); // change URL to match your dev URL
       cy.htmlvalidate();
     });
   });
