@@ -16,24 +16,32 @@
   </head>
 
 <body>
-    <div class="header">
-      <h1>Quan Le's Lab 5</h1>
-    </div>
-
-    <div class="container"> 
+  <section>
+    <div class="columns is-max-widescreen">
+      <div class="column info">
+        <h1 class="title">Quan Le's Lab 5</h1>
+        <div class="subtitle">Zip Code Food Search</div>
         <!-- start of input box-->
-        <form id="formElem">
-            <label for="input">Enter a Zip Code/City:</label>
-            <input type="text" id="input" class="input is-rounded is-small" placeholder="zipcode or city">
-            <div class="column is-3"></div>
-            <ul class="suggestions">
-                <!-- RESULTS POPULATE HERE -->
-            </ul>
-        </form>
+        <div class="block">
+          <form id="formElem">
+              <label for="input">Enter a Zip Code/City:</label>
+              <input type="text" id="input" name="text" class="input is-rounded is-small" placeholder="zipcode or city">
+              <div class="column is-3"></div>
+              <button class="button is-primary is-rounded" type="submit">Submit</button>
+              <div class="reply-box block">
+                <ul class="suggestions">
+                    <!-- RESULTS POPULATE HERE -->
+                </ul>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div class="column">
+        <div id="mapid"></div>
+      </div>
     </div>
+  </section>
 
-    <div id="mapid"></div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

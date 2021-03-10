@@ -54,31 +54,40 @@ async function dataHandler(mapObjectFromFunction) {
   const suggestions = document.querySelector('.suggestions');
 
   // fetch request
-  const request = await fetch(endpoint)
+  const request = await fetch(endpoint);
   // empty array for data
   const zipcodes = await request.json();
 
   // check for matches using input box compared to zipcodes array
-  function findMatches(wordToMatch, zipcodes) {
+  /* function findMatches(wordToMatch, zipcodes) {
     return zipcodes.filter((place) => {
       const regex = new RegExp(wordToMatch, 'gi');
       return place.zip.match(regex);
     });
-  }
+  } */
+
+  const filtered = data.filter((record) => record.zip.includes(zipcodes.value) && record.geocoded_column_1);
+  const topFive = filtered.slice(0, 5);
 
   // display matches found
   function displayMatches(event) {
     const matchArray = findMatches(event.target.value, zipcodes);
-    const html = matchArray.map((place) => {
-      const regex = new RegExp(this.value, 'gi');
-      // const cityName = place.city;
-      // const zipCode = place.zip;
-      const addressLine1 = place.address_line_1;
-      const addressLine2 = place.address_line_2;
-      const restaurantName = place.name;
-      // const inspectionResults = place.inspection_results;
-      // const {category} = place;
-      return `
+
+    topFive.forEach((item) => {
+      const longLat = item.geocoded_column_1.coordinates;
+      console.log('markerLongLat', longLat[0], longLat[1]);
+      const marker = L.marker([longLat[1], longLat[0]]).addTo(mapObjectFromFunction);
+
+      const html = matchArray.map((place) => {
+        const regex = new RegExp(this.value, 'gi');
+        // const cityName = place.city;
+        // const zipCode = place.zip;
+        const addressLine1 = place.address_line_1;
+        const addressLine2 = place.address_line_2;
+        const restaurantName = place.name;
+        // const inspectionResults = place.inspection_results;
+        // const {category} = place;
+        return `
               <div class="box is-small">
                   <li>
                       <div class="name">${restaurantName}</div>
@@ -86,8 +95,9 @@ async function dataHandler(mapObjectFromFunction) {
                   </li>
               </div>
               `;
-    }).join('');
-    suggestions.innerHTML = html;
+      }).join('');
+      suggestions.innerHTML = html;
+    });
   }
 
   // event listeners
