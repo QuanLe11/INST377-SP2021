@@ -8,7 +8,7 @@ function mapInit() {
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
+    accessToken: 'pk.eyJ1IjoicWxlMTEiLCJhIjoiY2ttMjYxeWVkNGxiMzJ3cG1mdzh0aHZ2NiJ9.8h8ZiZzj7VUBkXQaMeOdQw'
   }).addTo(mymap);
 
   const marker = L.marker([51.5, -0.09]).addTo(mymap);
