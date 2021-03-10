@@ -1,0 +1,64 @@
+/* customized main elements */
+html, body {
+    margin: 25px auto;
+    max-width: 960px;
+    line-height: 1.6;
+    font-size: 24px;
+    color: rgb(19, 18, 18);
+    text-align: center;
+    padding: 0;
+    background-color: #ff8c8c;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    line-height: 1.2;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 75;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* body element customizations */
+.container {
+    padding: 40px;
+}
+
+label {
+    margin: 5px;
+}
+
+input.searchbox {
+    margin: 5px;
+    text-align: center;
+}
+
+/* typeahead suggestion box customizations */
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 576px;
+    background: linear-gradient(0deg, rgb(252, 246, 162) 0%, rgb(255, 178, 11) 100%);
+}
+
+/* suggestion box font customizations */
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111;
+}
+
+.address,
+.category,
+.inspection {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #111;
+}
+
+#mapid { height: 180px; }
