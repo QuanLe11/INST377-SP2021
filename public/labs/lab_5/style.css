@@ -7,7 +7,7 @@ html, body {
     color: rgb(19, 18, 18);
     text-align: center;
     padding: 0;
-    background-color: #ff8c8c;
+    background-color: #2cd4eb;
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -43,7 +43,7 @@ input.searchbox {
 
 .box {
     width: 576px;
-    background: linear-gradient(0deg, rgb(252, 246, 162) 0%, rgb(255, 178, 11) 100%);
+    background: linear-gradient(0deg, rgb(226, 217, 94) 0%, rgb(240, 21, 94) 100%);
 }
 
 /* suggestion box font customizations */
